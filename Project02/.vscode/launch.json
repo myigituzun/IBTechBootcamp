@@ -1,0 +1,91 @@
+{
+    // Olası öznitelikler hakkında bilgi edinmek için IntelliSense kullanın.
+    // Mevcut özniteliklerin açıklamalarını görüntülemek için üzerine gelin.
+    // Daha fazla bilgi için şu adresi ziyaret edin: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch TestFind",
+            "request": "launch",
+            "mainClass": "com.myigituzun.filer.TestFind",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConsoleApplication",
+            "request": "launch",
+            "mainClass": "com.myigituzun.console.ConsoleApplication",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyLambaTest",
+            "request": "launch",
+            "mainClass": "com.myigituzun.thread.MyLambaTest",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyRunnableTest",
+            "request": "launch",
+            "mainClass": "com.myigituzun.thread.MyRunnableTest",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyInnerTest",
+            "request": "launch",
+            "mainClass": "com.myigituzun.thread.MyInnerTest",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyThreadTest",
+            "request": "launch",
+            "mainClass": "com.myigituzun.thread.MyThreadTest",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestLoad",
+            "request": "launch",
+            "mainClass": "com.myigituzun.filer.TestLoad",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestStore",
+            "request": "launch",
+            "mainClass": "com.myigituzun.filer.TestStore",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReaderText",
+            "request": "launch",
+            "mainClass": "com.myigituzun.io.ReaderText",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Project02_188e50e1"
+        },
+        {
+            "type": "java",
+            "name": "Launch WriterTest",
+            "request": "launch",
+            "mainClass": "com.myigituzun.io.WriterTest",
+            "projectName": "Project02_188e50e1"
+        }
+    ]
+}
