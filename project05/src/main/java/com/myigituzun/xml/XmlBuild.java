@@ -11,7 +11,7 @@ public class XmlBuild {
 		Document document = parse(path);
 
 		Element productElement = document.getDocumentElement();
-		String id = productElement.getAttribute("id");
+		long id = getAttribute(productElement, "id", 0);
 		System.out.println(id);
 
 		String name = getSingleElementText(productElement, "name", "");
