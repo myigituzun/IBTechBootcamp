@@ -8,6 +8,8 @@ import org.xml.sax.SAXException;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -44,12 +46,17 @@ public class XmlUtilities {
 	}
 
 	public static void dump(Document document, String path) throws TransformerException, IOException {
+		FileWriter writer = new FileWriter(new File(path));
+		dump(document, writer);
+	}
+	
+	public static void dump(Document document, Writer writer) throws TransformerException, IOException {
 		TransformerFactory factory = TransformerFactory.newInstance();
 		Transformer transformer = factory.newTransformer();
 		DOMSource data = new DOMSource(document);
-		StreamResult output = new StreamResult(new FileWriter(new File(path)));
-		transformer.transform(data, output);
-		System.out.println(output.toString());
+		StreamResult result = new StreamResult(writer);
+		transformer.transform(data, result);
+		System.out.println("Kontrol edin");
 	}
 
 	public static String getSingleElementText(Element parent, String tag, String defaultValue) {
