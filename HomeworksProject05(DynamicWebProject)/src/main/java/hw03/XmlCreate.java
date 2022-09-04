@@ -17,8 +17,8 @@ public class XmlCreate {
 
 		long id = getAttribute(student, "id", 0);
 		String name = getSingleElementText(student, "name", "");
-		double salary = getSingleElementText(student, "mark", 0);
-		System.out.println(id + ": " + name + " - " + salary);
+		double mark = getSingleElementText(student, "mark", 0);
+		System.out.println(id + ": " + name + " - " + mark);
 
 		String path = "D:\\GitHub\\IBTech\\IBTechBootcamp\\XML\\Generated.xml";
 		
