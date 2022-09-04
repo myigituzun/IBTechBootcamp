@@ -13,12 +13,12 @@ public class PlayerFindClient {
 	public static void main(String[] args) {
 		long productId = 123;
 		String address = String.format("http://localhost:8080/player/find?=%d", productId);
-		
+
 		InputStream inputStream = WebHelper.get(address);
 		Document document = XmlHepler.parse(inputStream);
-		
+
 		Player player = PlayerXml.parse(document);
-		
+
 		System.out.println(player.getPlayerId() + " " + player.getPlayerName() + " " + player.getAverageScore());
 	}
 }
