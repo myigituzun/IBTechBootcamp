@@ -17,18 +17,24 @@ import hw04.sports.xml.PlayerXml;
 
 @WebServlet("/player/find")
 public class PlayerFindServlet extends HttpServlet {
-	
+
 	@Override
-	protected void doGet(HttpServletRequest requset, HttpServletResponse response) throws ServletException, IOException {
-		long playerId = Long.parseLong(requset.getParameter("id"));
-		
-		PlayerManager manager = new PlayerManager();
-		Player player = manager.find(playerId);
-		
-		Document document = PlayerXml.format(player);
-		
-		response.setContentType("application/xml; charset=UTF-8");
-		
-		XmlHepler.dump(document, response.getOutputStream());
+	protected void doGet(HttpServletRequest requset, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		try {
+			long playerId = Long.parseLong(requset.getParameter("id"));
+
+			PlayerManager manager = new PlayerManager();
+			Player player = manager.find(playerId);
+
+			Document document = PlayerXml.format(player);
+
+			response.setContentType("application/xml; charset=UTF-8");
+
+			XmlHepler.dump(document, response.getOutputStream());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

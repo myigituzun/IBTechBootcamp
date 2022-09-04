@@ -3,6 +3,9 @@ package hw04.sports.web.client;
 import java.io.IOException;
 import java.net.URLConnection;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+
 import org.w3c.dom.Document;
 
 import hw04.core.utils.StreamHelper;
@@ -12,7 +15,7 @@ import hw04.sports.database.entity.Player;
 import hw04.sports.xml.PlayerXml;
 
 public class PlayerInsertClient {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException {
 		String address = "http://localhost:8080/player/insert";
 
 		Player player = new Player(0, "Mahzuni Şerif", 2.5);
