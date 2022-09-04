@@ -19,6 +19,8 @@ public class PlayerInsertClient {
 		Document document = PlayerXml.format(player);
 
 		URLConnection connection = WebHelper.connect(address);
+		connection.setRequestProperty("content-type", "application/xml; charset=UTF-8");
+		
 		XmlHepler.dump(document, connection.getOutputStream());
 
 		String result = StreamHelper.read(connection.getInputStream());
