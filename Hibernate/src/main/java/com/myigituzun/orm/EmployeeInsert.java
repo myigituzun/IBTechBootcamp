@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 public class EmployeeInsert {
 	public static void main(String[] args) {
-		Employee employee = new Employee(0, "Ahmet Gürses", 4520);
+		Employee employee = new Employee(0, "Ferdi Özbeğen", 25555);
 		
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPersistenceUnit");
 		EntityManager manager = factory.createEntityManager();

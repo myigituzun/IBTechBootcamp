@@ -1,0 +1,27 @@
+package com.myigituzun.orm;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+public class EmployeeFilter {
+	public static void main(String[] args) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPersistenceUnit");
+		EntityManager manager = factory.createEntityManager();
+		
+		String jpql = "select e from Employee e where e.monthlySalary > :montlySalaryMin";
+		TypedQuery<Employee> query = manager.createQuery(jpql, Employee.class);
+		query.setParameter("montlySalaryMin", 25600.0);
+		
+		List<Employee> employeeList = query.getResultList();
+		for (Employee employee : employeeList) {
+			System.out.println(employee.getEmployeeName());
+		}
+		
+		manager.close();
+		factory.close();
+	}
+}
