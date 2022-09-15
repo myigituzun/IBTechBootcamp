@@ -20,5 +20,10 @@ public class MyActorReflect {
 		}		
 		Method processMethod = clazz.getMethod("process");
 		processMethod.invoke(object);
+		
+		Class<?>[] parameterTypes = {int.class, String.class, double.class};
+		Method transformMethod = clazz.getMethod("transform", parameterTypes);
+		Object result = transformMethod.invoke(object, 123, "Godoro", 98.45);
+		System.out.println(result);
 	}
 }
